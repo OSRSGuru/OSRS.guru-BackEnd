@@ -1,4 +1,4 @@
-from .models import Server, GeographicalLocation, GameObject
+from .models import Server, ServerLocation, GameObject
 from rest_framework import serializers
 
 
@@ -9,12 +9,12 @@ class ServerSerializer(serializers.HyperlinkedModelSerializer):
         fields = '__all__'
 
 
-class GeographicalLocationSerializer(serializers.HyperlinkedModelSerializer):
+class ServerLocationSerializer(serializers.HyperlinkedModelSerializer):
 
     servers = ServerSerializer(read_only=True, many=True)
 
     class Meta:
-        model = GeographicalLocation
+        model = ServerLocation
         fields = '__all__'
 
 
