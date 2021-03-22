@@ -12,7 +12,7 @@ class GeographicalLocation(models.Model):
 
 class Server(models.Model):
     world_id = models.IntegerField(primary_key=True)
-    location = models.ForeignKey(GeographicalLocation, models.SET_NULL, blank=True, null=True)
+    location = models.ForeignKey(GeographicalLocation, models.SET_NULL, blank=True, null=True, related_name="servers")
     members = models.BooleanField(blank=True, null=True, default=False)
     activity = models.CharField(max_length=255, blank=True, null=True)
     pvp = models.BooleanField(blank=True, null=True, default=False)
