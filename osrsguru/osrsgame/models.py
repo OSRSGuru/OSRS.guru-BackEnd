@@ -7,7 +7,7 @@ class GeographicalLocation(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.name
+        return f"GeographicalLocation: {self.name}"
 
 
 class Server(models.Model):
@@ -22,7 +22,7 @@ class Server(models.Model):
     skill_total = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.world_id)
+        return f"Server: {self.world_id}"
 
 
 class GameObject(models.Model):
@@ -30,4 +30,4 @@ class GameObject(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return f"GameObject: {self.name}"
