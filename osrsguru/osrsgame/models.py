@@ -7,7 +7,7 @@ class ServerLocation(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
-        return f"GeographicalLocation: {self.name}"
+        return f"ServerLocation: {self.name}"
 
 
 class Server(models.Model):
